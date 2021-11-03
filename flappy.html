@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/flappy.css">
+</head>
+
+<body class="conteudo">
+    <h1>Flappy Bird</h1>
+    <div wm-flappy>
+    </div>
+    <script src="https://kit.fontawesome.com/cc655ed313.js" crossorigin="anonymous"></script>
+    <script src="js/flappy.js"></script>
+    <script>
+         // Remover Div do server-lite
+        const removerDiv = _ =>{
+            let divs = document.getElementsByTagName('div')
+
+            document.body.onload = _ =>{
+                setTimeout( _ =>{
+                    let list = [...divs]
+                    const lixo = list.pop()
+                    lixo.style.display="none"
+                }, 2500)
+            }
+        };removerDiv()
+
+    let obj = {a: 1, b: 2}
+    let json = JSON.stringify(obj)
+    console.log(json)
+    let resultado = JSON.parse(json)
+    console.log(resultado, resultado.a, resultado.b)
+    
+    const msg = '{"nome":"Werbster", "idade": 19}'
+    const msgObj = JSON.parse(msg)
+    console.log(msgObj)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+
+body{
+    height: 700px;
+    padding-bottom: 50px;
+}
+
+[wm-flappy] {
+    position: relative;
+    border: 5px solid dodgerblue;
+    border-radius: 8px;
+    width: 1200px;
+    height: 700px;
+    margin: 15px;
+    background-color: deepskyblue;
+    overflow: hidden;
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+}
+
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barreira{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda{
+    width: 130px;
+    height: 30px;
+    background: linear-gradient(90deg, #639301, #a5e82e) ;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+.barreira .corpo{
+    width: 110px;
+    height: 160px;
+    background: linear-gradient(90deg, #639301, #a5e82e) ;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Pixel';
+    font-size: 70px;
+    z-index: 100;
+}
+
+
+
+.play {
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    position: absolute; 
+    top: 20%;
+    left: calc(50% - 175px) ;
+    width: 350px;
+    height: 350px;
+    background-color: #c0c0c0;
+    color: #fff;
+    border: 2px solid;
+    border-style: none;
+    border-radius: 8px;
+    box-shadow: 0 0 1em #000;
+}
+
+.btn{
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    color: #fff;
+    background-color: #a5e82e;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    background-color: aqua;
+}
