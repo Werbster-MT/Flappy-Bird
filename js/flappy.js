@@ -163,13 +163,13 @@ function FlappyBird(){
     const height = areaDoJogo.clientHeight
     const width = areaDoJogo.clientWidth
 
-    // const reloadCard = new ReloadCard()
     const playCard = new PlayCard()
 
     const progresso = new Progresso()
     const barreiras = new Barreiras(height, width, 200, 400, () => {
         progresso.atualizarPontos(++pontos)
     })
+    
     const passaro = new Passaro(height)
 
     areaDoJogo.appendChild(progresso.elemento)
@@ -208,6 +208,3 @@ function FlappyBird(){
 }
 
 const game = new FlappyBird()
-
-
-
